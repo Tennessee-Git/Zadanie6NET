@@ -17,7 +17,7 @@ namespace Filter.Utils
             if (result is PageResult)
             {
                 var page = ((PageResult)result);
-                string ip = context.HttpContext.Request.Host.ToString();
+                string ip = context.HttpContext.Connection.RemoteIpAddress.ToString();
                 page.ViewData["filterMessage"] = "IP: " + ip;
             }
 
