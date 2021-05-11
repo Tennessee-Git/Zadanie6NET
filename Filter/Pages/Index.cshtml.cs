@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Filter.Utils;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Filter.Pages
 {
+    [CustomFilterAttributes]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
